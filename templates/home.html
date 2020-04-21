@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div style="height: 10%; width: 100px;"></div>
+<p style="font-size: 45px;">Choose an image to analyze</p>
+<form onsubmit="return fileValidation()" action="/" method="POST" enctype="multipart/form-data">
+    <label for="file" class="absolute" id="fileName">Choose an Image</label>
+    <input type="file" name="file" id="file" style="display: none;" onchange="return fileValidation()">
+    <input type="submit" value="Analyze" class="absolute" id="button">
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block top %}
+{% endblock %}
+
+{% block content %}
+    <img class="absolute" src=" {{url_for('send_image', filename=image_name)}} " style="max-height: 350px;">
+    <p style="font-size: 45px; margin: 20px auto 0">{{first}}</p>
+    <p style="font-size: 35px; margin: 0 auto 10px">{{second}}</p>
+    <a class="absolute" href="https://www.google.com/search?q={{'+'.join(breed.split())}}"
+       target="_blank" id="link">{{breed}}</a>
+    <a class="absolute" id="button" href="/">Back</a>
+{% endblock %}

@@ -1,0 +1,89 @@
+@font-face {
+  font-family: myFont;
+  src: url('fonts/Ananda Personal Use.ttf');
+}
+
+@font-face {
+  font-family: myFont2;
+  src: url('fonts/Hunters.otf');
+}
+
+div#main {
+  height: 100vh;
+  width: 60%;
+  position: absolute;
+  right: 0;
+}
+body {
+    background-image: url('images/Dog Background.jpg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+p, .absolute {
+    text-align: center;
+    color: #5F3C31;
+    font-family: myFont2;
+    display: block;
+    margin: 20px auto 20px auto;
+}
+
+#fileName {
+    background-color: #9B5434;
+    color: #E3D6CC;
+    font-size: 35px;
+    cursor: pointer;
+    width: 250px;
+    padding: 10px 0 10px;
+    border-radius: 20px;
+}
+#fileName:hover {
+    background-color: #753417;
+    color: #E3D6CC;
+}
+#fileName:active {
+    color: #C0AC9D;
+}
+
+#button {
+    background-color: #5F3C31;
+    color: #F7C77E;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 45px;
+    border-radius: 30px;
+    width: 150px;
+    padding: 10px 0 10px;
+    margin: 60px auto 20px auto;
+}
+#button:hover {
+    color: #F7C77E;
+    background-color: #51291D;
+}
+#button:active {
+    color: #D29E4E;
+}
+
+img {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+}
+
+#link {
+    font-family: myFont;
+    font-size: 45px;
+    text-decoration: none;
+    color: #9B5434;
+}
+
+#link:hover {
+    color: #4C1902;
+}
+
+#link:active {
+    color: #BB7758;
+}
