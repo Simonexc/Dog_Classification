@@ -5,6 +5,7 @@ If dog's photo is provided, it estimates the dog's breed. If a photo of a human 
 All required libraries can be found in the requirements.txt
 
 You may install all the necessary libraries using the following command ([conda](https://docs.conda.io/en/latest/) is requried)
+
 ```conda create --name <env> --file requirements.txt```
 
 ## Running the app
