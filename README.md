@@ -1,5 +1,8 @@
 # Dog Breed Classifier
-If dog's photo is provided, it estimates the dog's breed. If a photo of a human is provided, it estimates which dog breed is the most resembling.
+If a photo of a dog is provided, it estimates the dog's breed. If a photo of a human is provided, it estimates which dog breed is the most resembling.
+
+![](static/images/Readme%20image.png)
+
 
 ## Installing
 All required libraries can be found in the requirements.txt
@@ -17,3 +20,6 @@ This web app was made by Szymon Trochimiak based on the Dog-Breed Classifier Pro
 ## Acknowledgments
 - Icon made by [www.flaticon.com](https://www.flaticon.com/authors/freepik)
 - Background photo created by [rawpixel.com - www.freepik.com](https://www.freepik.com/free-photos-vectors/background)
+
+## License
+This project is provided under the MIT license.
