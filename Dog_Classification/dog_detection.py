@@ -7,15 +7,20 @@ from PIL import Image
 class DogDetection:
     def __init__(self, use_cuda):
         self.use_cuda = use_cuda
-        self.model = models.densenet161(pretrained=True)
+        self.model = models.densenet161(pretrained=True)  # download Densenet-161 model
+
+        # turn off training
         self.model.train(False)
         self.model.eval()
 
+        # move model to gpu if available
         if self.use_cuda:
             self.model = self.model.cuda()
 
-    def model_prediction(self, img_path):
+    def dog_detector(self, img_path):
         img = Image.open(img_path)
+
+        # preprocess image
         img_to_tensor = transforms.Compose([transforms.Resize(224),
                                             transforms.CenterCrop(224),
                                             transforms.ToTensor(),
@@ -23,14 +28,11 @@ class DogDetection:
 
         img_tensor = img_to_tensor(img)
         img_tensor = img_tensor.view((1, *img_tensor.shape))
+
+        # move image to gpu if available
         if self.use_cuda:
             img_tensor = img_tensor.cuda()
 
         prediction = self.model(img_tensor)
 
-        return torch.max(prediction, 1)[1].item()  # predicted class index
-
-    def dog_detector(self, img_path):
-        predicted_index = self.model_prediction(img_path)
-
-        return 151 <= predicted_index <= 268
+        return 151 <= torch.max(prediction, 1)[1].item() <= 268  # if class is between 151 and 268, it is a dog
